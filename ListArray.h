@@ -106,33 +106,3 @@ template <typename T> class ListArray : public List<T> {
 		int size() override{return n;} 
 };
 
-//template <typename T> int ListArray<T> ::MINSIZE = 2;
-/*
-template <typename T> ListArray<T> ::ListArray(){
-	array = new T[MINSIZE];
-	n = 0;
-	max = 2;
-} 
-template <typename T> ListArray<T> ::~ListArray(){
-	delete[] array; 
-} 
-
-template <typename T> T ListArray<T> ::operator[](int pos){
-	if (pos >= 0 && pos < max) { return array[pos]; }
-	else { throw out_of_range(“Posición no válida del array\n”); }
-}  
-
-ostream& operator<<(ostream &out, const ListArray<T> &list){
-	for(int i = 0; i < max; i++)out << list[i] << " "; 
-	return out;
-} 
-
-template <typename T> void ListArray<T> ::resize(int new_size){
-	T* a = new T[new_size];
-	for(int i = 0; i < max; i++)a[i] = array[i];
-	delete[] array;
-	array = a;
-	max = new_size;   
-} 
-
-*/
