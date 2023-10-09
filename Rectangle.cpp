@@ -20,7 +20,8 @@ Rectangle& Rectangle::operator=(const Rectangle &r) {
 	return *this; 
 } 
 ostream& operator<<(ostream &out, const Rectangle &r){
-	for(int i = 0; i < 4; i++)out << "Rectángulo vértices: (" << r.vs[i].x << "," << r.vs[i].y << ") ";
+	out << "Rectangulo: ";
+	for(int i = 0; i < 4; i++)out << "(" << r.vs[i].x << "," << r.vs[i].y << ") ";
 	out << "Color " << r.color;
 	return out;
 } 
@@ -52,8 +53,7 @@ void Rectangle::translate(double incX, double incY){
 }
 
 void Rectangle::print() {
-	for(int i = 0; i < 4; i++)cout << "Rectángulo vértices: (" << vs[i].x << "," << vs[i].y << ") ";
-	cout << "Color " << color;
+	cout << *this;
 }
 
 Rectangle::Rectangle():Shape(){
