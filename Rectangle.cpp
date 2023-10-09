@@ -84,7 +84,7 @@ void Rectangle::set_vertices(Point2D* vertices){
 	if((Point2D::distance(vertices[0],vertices[1]) == Point2D::distance(vertices[2],vertices[3])) 
 	&& (Point2D::distance(vertices[1],vertices[2]) == Point2D::distance(vertices[0],vertices[3]))) rect = true;
 	if(rect)vs = vertices;
-	else throw invalid_argument("Los vértices no conforman un cuadrado");
+	else throw invalid_argument("Los vértices no conforman un rectángulo");
 } 
 
 
