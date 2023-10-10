@@ -10,6 +10,7 @@ class Circle : public Shape {
 		double perimeter() const override;
 		void translate(double incX, double incY) override;
 		void print() override;
+		char type() override;
 
 		Circle();
 
@@ -22,6 +23,7 @@ class Circle : public Shape {
 		double get_radius() const;
 		
 		void set_radius(double r);
+
 
 		friend ostream& operator<<(std::ostream &out, const Circle &c);
 };

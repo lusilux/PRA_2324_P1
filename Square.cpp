@@ -12,9 +12,9 @@ bool check(Point2D* vertices){
 } 
 
 ostream& operator<<(ostream &out, const Square &square){
-    out << "Square: ";
-    for(int i = 0; i < 4; i++)out << "(" << square.vs[i].x << "," << square.vs[i].y << ") ";
-	out << "Color " << square.color;
+    out << "[Square: color = " << square.color << "; " ;
+    for(int i = 0; i < 4; i++)out << "v" << i << "= " << "(" << square.vs[i].x << "," << square.vs[i].y << ") ";
+	out << "]" << endl;
 	return out;
 } 
 
@@ -54,5 +54,7 @@ Square::Square(string color, Point2D* vertices){
 } 
 
     
-
+char Square::type() {
+	return 's';
+} 
 

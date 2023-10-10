@@ -23,6 +23,7 @@ class Rectangle : public Shape{
 		double perimeter() const override;
 		void translate(double incX, double incY) override;
 		virtual void print() override;
+		virtual char type() override;
 
 		Rectangle();
 		Rectangle(string color, Point2D* vertices);

@@ -14,9 +14,7 @@ void Circle::translate(double incX, double incY) {
 	center.y+=incY;
 }
 void Circle::print() {
-	cout << "Centro: (" << center.x << "," << center.y << ")" << endl 
-	     <<	"Radio " << radius << endl
-	     << "Color " << Shape::get_color() << endl;
+	cout << "[Circle: color = " << Shape::get_color() << "; centro = (" << center.x << "," << center.y << ")" << "; radio = " << radius << "]" << endl;
 }
 
 Circle::Circle() : Shape() {
@@ -50,6 +48,9 @@ double Circle::get_radius() const {
 void Circle::set_radius(double r){
 	radius = r;
 }
+
+char Circle::type() {return 'c';} 
+
 
 ostream& operator<<(std::ostream &out, const Circle &c){
 	out  << "Centro: (" << c.center.x << "," << c.center.y << ")" << endl 

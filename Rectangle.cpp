@@ -20,9 +20,9 @@ Rectangle& Rectangle::operator=(const Rectangle &r) {
 	return *this; 
 } 
 ostream& operator<<(ostream &out, const Rectangle &r){
-	out << "Rectangulo: ";
-	for(int i = 0; i < 4; i++)out << "(" << r.vs[i].x << "," << r.vs[i].y << ") ";
-	out << "Color " << r.color;
+	out << "[Square: color = " << r.color << "; " ;
+    for(int i = 0; i < 4; i++)out << "v" << i << "= " << "(" << r.vs[i].x << "," << r.vs[i].y << ") ";
+	out << "]" << endl;
 	return out;
 } 
 
@@ -87,4 +87,6 @@ void Rectangle::set_vertices(Point2D* vertices){
 	else throw invalid_argument("Los vértices no conforman un rectángulo");
 } 
 
-
+char Rectangle::type() {
+	return 'r';
+} 

@@ -9,6 +9,7 @@ class Square : public Rectangle{
     public:
         void print() override;
         void set_vertices(Point2D* vertices) override;
+        char type() override;
 
         Square();
         Square(string color, Point2D* vertices);

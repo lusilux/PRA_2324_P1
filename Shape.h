@@ -20,5 +20,6 @@ class Shape{
 		virtual double perimeter() const = 0;
 		virtual void translate(double incX, double incY) = 0;
 		virtual void print() = 0;
+		virtual char type() = 0;
 };
 #endif
