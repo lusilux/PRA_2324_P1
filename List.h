@@ -13,6 +13,7 @@ template <typename T> class List{
 		virtual int search(T e) = 0;
 		virtual bool empty() = 0;
 		virtual int size() = 0;
+		virtual T* arr() = 0;
 };
 
 #endif

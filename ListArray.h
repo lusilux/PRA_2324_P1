@@ -104,5 +104,7 @@ template <typename T> class ListArray : public List<T> {
 		} 
 		bool empty() override{return n == 0;} 
 		int size() override{return n;} 
+		T* arr() override{return array;} 
+
 };
 
